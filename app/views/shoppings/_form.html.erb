@@ -1,0 +1,13 @@
+
+<%= form_for @shop do |f| %>
+
+  <p>
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </p>
+  
+  <p>
+    <%= f.submit "Add to Shopping List" %>
+  </p>
+
+<% end %>

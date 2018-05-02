@@ -1,0 +1,14 @@
+<h2>Shopping List</h2>
+
+<table>
+  <tr>
+    <th>Item</th>
+  </tr>
+  <% @shop.each do |shoppings| %>
+    <tr>
+      <td><%= shoppings.item %><td>
+      <td><%= link_to "Edit", edit_shopping_path(shoppings) %></td>
+      <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" } %></td>
+    </tr>
+    <% end %>
+</table>
