@@ -1,0 +1,25 @@
+<h2>New Item</h2>
+
+<% if @shop.errors.any? %>
+  <h3>The following errors prevented the item being saved</h3>
+    <ul>
+      <% @shop.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+
+<% end %>
+<%= form_for @shop do |f| %>
+
+  <p>
+    <%= f.label :item %><br />
+    <%= f.text_field :item %>
+  </p>
+  
+  <p>
+    <%= f.submit "Add to Shopping List" %>
+  </p>
+
+<% end %>
+
+<%= link_to "Shopping List", shoppings_path %>
