@@ -1,25 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Shoppingapp</title>
+    <title>Shopping list</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Home", root_path %></li>
-            <li><%= link_to "Add an Item", new_shopping_path %></li>
-            <li><%= link_to "Shopping List", shoppings_path %></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render "layouts/navBar" %>
     <div class="container">
       <%= yield %>
     </div>

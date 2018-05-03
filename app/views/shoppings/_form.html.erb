@@ -1,13 +1,17 @@
 
-<%= form_for @shop do |f| %>
-
-  <p>
-    <%= f.label :item %><br />
-    <%= f.text_field :item %>
-  </p>
-  
-  <p>
-    <%= f.submit "Add to Shopping List" %>
-  </p>
-
-<% end %>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="well">
+      <%= form_for @shop do |f| %>
+        <p>
+          <%= f.label :Add_item %><br />
+          <%= f.text_field :item %>
+        </p>
+      <p>
+        <%= f.submit "Add to Shopping List", class: "btn btn-success" %>
+        <%= link_to "View Shopping List", shoppings_path, class: "btn btn-primary" %>
+      </p>
+    <% end %>
+    </div>
+  </div>
+</div>

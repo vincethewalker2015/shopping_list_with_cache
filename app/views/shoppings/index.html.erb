@@ -1,14 +1,24 @@
-<h2>Shopping List</h2>
+<div class="center jumbotron">
+  <h2 class="text-center">Shopping List</h2>
+</div>
 
-<table>
-  <tr>
-    <th>Item</th>
-  </tr>
-  <% @shop.each do |shoppings| %>
-    <tr>
-      <td><%= shoppings.item %><td>
-      <td><%= link_to "Edit", edit_shopping_path(shoppings) %></td>
-      <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" } %></td>
-    </tr>
-    <% end %>
-</table>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <div class="well">
+        <table>
+          <tr>
+            <th>Item</th>
+          </tr>
+          <% @shop.each do |shoppings| %>
+            <tr>
+              <td class="itemsFont"><%= shoppings.item %><td>
+              <td><%= link_to "Edit Item", edit_shopping_path(shoppings), class: "btn btn-primary bdr" %></td>
+              <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" }, class: "btn btn-danger" %></td>
+            </tr>
+            <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

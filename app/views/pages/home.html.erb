@@ -1,1 +1,13 @@
-<H1>Home Page</H1>
+<div class="center jumbotron">
+  <h1 class="text-center">Shopping List</h1>
+</div>
+
+<div class="container">
+  <p>
+    <%= link_to "Add an item to the list", new_shopping_path, class: "btn btn-primary" %>
+  </p>
+  <br />
+  <p>
+     <%= link_to "View Shopping List", shoppings_path, class: "btn btn-warning" %>
+  </p>
+</div>
