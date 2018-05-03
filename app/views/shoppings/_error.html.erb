@@ -1,0 +1,12 @@
+
+<div class="container">
+  <% if @shop.errors.any? %>
+    <h3 class="errorMessage">The following errors prevented your item being saved:</h3>
+      <ul>
+        <% @shop.errors.full_messages.each do |msg| %>
+          <li class="errorMessage"><%= msg %></li>
+        <% end %>
+      </ul>
+  
+  <% end %>
+</div>

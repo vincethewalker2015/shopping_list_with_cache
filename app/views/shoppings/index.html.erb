@@ -1,4 +1,4 @@
-<div class="center jumbotron">
+<div class="center jumbotron jumboIndex">
   <h2 class="text-center">Shopping List</h2>
 </div>
 
@@ -6,17 +6,18 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3">
       <div class="well">
+        <p><%= link_to "Add an Item", new_shopping_path, class: "btn btn-success" %></p>
         <table>
           <tr>
-            <th>Item</th>
+            <th class="boldText">Items</th>
           </tr>
           <% @shop.each do |shoppings| %>
             <tr>
               <td class="itemsFont"><%= shoppings.item %><td>
               <td><%= link_to "Edit Item", edit_shopping_path(shoppings), class: "btn btn-primary bdr" %></td>
-              <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" }, class: "btn btn-danger" %></td>
+              <td><%= link_to "Delete Item", shopping_path(shoppings), method: :delete, data: {confirm: "Deleted" }, class: "btn btn-danger bdr" %></td>
             </tr>
-            <% end %>
+          <% end %>
         </table>
       </div>
     </div>

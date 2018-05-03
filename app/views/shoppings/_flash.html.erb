@@ -1,11 +1,10 @@
 
-
-<% if @shop.errors.any? %>
-  <h3>The following errors prevented the item being saved</h3>
-    <ul>
-      <% @shop.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-    </ul>
-
-<% end %>
+<div class="container">
+  <p>
+    <% flash.each do |name, msg| %>
+        <ul>
+          <li class="happyMessage"><%= msg %></li>
+        </ul>
+    <% end %>
+  </p>
+</div>
