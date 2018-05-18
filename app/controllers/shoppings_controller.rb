@@ -7,7 +7,7 @@ class ShoppingsController < ApplicationController
   def create
     @shop = Shopping.new(shopping_params)
     if @shop.save
-      flash[:notice] = "Item added"
+      flash[:notice] = "Item Successfully added"
       redirect_to shoppings_path(@shop)
     else
     render 'new'
