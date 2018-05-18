@@ -8,7 +8,7 @@ class ShoppingsController < ApplicationController
     @shop = Shopping.new(shopping_params)
     if @shop.save
       flash[:notice] = "Item added"
-      redirect_to shopping_path(@shop)
+      redirect_to shoppings_path(@shop)
     else
     render 'new'
     end
@@ -27,7 +27,7 @@ class ShoppingsController < ApplicationController
     @shop = Shopping.find(params[:id])
     if @shop.update(shopping_params)
       flash[:notice] = "Item was sucessfully Updated"
-      redirect_to shopping_path(@shop)
+      redirect_to shoppings_path(@shop)
     else
       render 'edit'
     end
