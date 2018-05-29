@@ -7,7 +7,7 @@ class ShoppingsController < ApplicationController
   def create
     @shop = Shopping.new(shopping_params)
     if @shop.save
-      flash[:notice] = "Item Successfully added"
+      flash[:success] = "Item Successfully added"
       redirect_to shoppings_path(@shop)
     else
     render 'new'
@@ -26,7 +26,7 @@ class ShoppingsController < ApplicationController
   def update
     @shop = Shopping.find(params[:id])
     if @shop.update(shopping_params)
-      flash[:notice] = "Item was sucessfully Updated"
+      flash[:success] = "Item was sucessfully Updated"
       redirect_to shoppings_path(@shop)
     else
       render 'edit'
@@ -40,6 +40,7 @@ class ShoppingsController < ApplicationController
   def destroy
     @shop = Shopping.find(params[:id])
     @shop.destroy
+    flash[:danger] = "Item was Removed"
     redirect_to shoppings_path
   end
   
