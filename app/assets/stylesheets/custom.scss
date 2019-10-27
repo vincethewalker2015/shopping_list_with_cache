@@ -2,7 +2,9 @@
 @import "bootstrap";
 
 /* Home Page */
-
+h1, h2, p, th, td {
+  font-family: 'Open Sans', sans-serif;
+}
 .jumboMain {
   border: 10px solid white;
   margin-top: 100px;
